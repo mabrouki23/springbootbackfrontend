@@ -31,7 +31,8 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }} 
-    - run: npm install    
+        working-directory: D:\a\springbootbackfrontend\springbootbackfrontend\frontend   
+    - run: npm install 
     - run: npm ci
       working-directory: D:\a\springbootbackfrontend\springbootbackfrontend\frontend
     - run: npm run build --if-present
