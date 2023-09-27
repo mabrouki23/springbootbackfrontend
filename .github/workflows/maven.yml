@@ -31,12 +31,15 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }} 
-        working-directory: D:\a\springbootbackfrontend\springbootbackfrontend\frontend   
+         
     - run: npm install 
+      working-directory: D:\a\springbootbackfrontend\springbootbackfrontend\frontend  
     - run: npm ci
       working-directory: D:\a\springbootbackfrontend\springbootbackfrontend\frontend
     - run: npm run build --if-present
+      working-directory: D:\a\springbootbackfrontend\springbootbackfrontend\frontend  
     - run: npm test
+      working-directory: D:\a\springbootbackfrontend\springbootbackfrontend\frontend  
     - uses: actions/checkout@v3
     - name: Set up JDK 17
       uses: actions/setup-java@v3
